@@ -6,25 +6,10 @@ const fs = require('fs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(require('./routes'));
+
 app.use(express.static('public'));
-
-
-app.get('/', (req, res) => {});
-
-app.get('/*', (req, res) => {});
-
-app.get('/notes', (req, res) => {});
-
-app.get('/api/notes', (req, res) => {});
-
-app.post('/api/notes', (req, res) => {});
-
-
-
-
-
-
-
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
