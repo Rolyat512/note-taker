@@ -8,7 +8,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(require('./routes'));
-
 app.use(express.static('public'));
 
 app.listen(PORT, () =>
